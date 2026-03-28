@@ -1,0 +1,130 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Projects | Jorge Gabriel" activeNav="/projetos">
+  <div class="page-content">
+    <header class="section">
+      <h1 class="page-title">Projects</h1>
+      <p class="page-subtitle">Open source and professional work</p>
+    </header>
+
+    <div class="projects-grid">
+      <div class="card project-card">
+        <div class="project-header">
+          <h3 class="project-name">NautiKube</h3>
+          <a href="https://github.com/jorgegabrielti/nautikube" target="_blank" rel="noopener noreferrer" class="project-link">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 7h8v8M15 7L7 15"></path>
+            </svg>
+          </a>
+        </div>
+        <p class="project-description">
+          CLI tool for comprehensive Kubernetes cluster analysis. Scans resources, detects misconfigurations, and provides actionable insights for cluster health and optimization.
+        </p>
+        <div class="tags">
+          <span class="tag">Go</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">CLI</span>
+          <span class="tag">SRE</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    height: 100%;
+  }
+
+  .project-card:hover {
+    border-color: var(--blue);
+    box-shadow: 0 0 20px rgba(88, 166, 255, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-name {
+    color: var(--text);
+    font-size: 1.25rem;
+    margin: 0;
+    font-weight: 600;
+    flex: 1;
+    word-break: break-word;
+  }
+
+  .project-link {
+    color: var(--blue);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    transition: color 0.2s ease;
+  }
+
+  .project-link:hover {
+    color: var(--green);
+  }
+
+  .project-description {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+    flex: 1;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tag {
+    background: rgba(88, 166, 255, 0.1);
+    border: 1px solid rgba(88, 166, 255, 0.2);
+    color: var(--blue);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    font-weight: 500;
+  }
+
+  @media (max-width: 640px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

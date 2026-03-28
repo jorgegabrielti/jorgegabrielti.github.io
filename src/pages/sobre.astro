@@ -1,0 +1,71 @@
+
+<style>
+  .page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .bio {
+    color: var(--text);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 1rem 0;
+  }
+
+  .bio .hash {
+    color: var(--green);
+    font-family: var(--font-mono);
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .skill-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 1rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+
+  .skill-card:hover {
+    border-color: var(--green);
+    box-shadow: 0 0 12px rgba(0, 255, 153, 0.1);
+  }
+
+  .skill-name {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .currently-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+
+  .currently-list li {
+    color: var(--text);
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .currently-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-size: 1.2rem;
+  }
+</style>
